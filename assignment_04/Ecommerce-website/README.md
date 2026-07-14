@@ -51,7 +51,7 @@ A small e-commerce demo site built with **PHP**, **Bootstrap 5**, and **PHP Sess
 
 ### Requirements
 - PHP 7.4+ (or any recent PHP version)
-- A local server such as [XAMPP](https://www.apachefriends.org/), [MAMP](https://www.mamp.info/), or PHP's built-in server
+- A local server such as [XAMPP](https://www.apachefriends.org/), [Laragon](https://laragon.org/), or PHP's built-in server
 
 ### Run locally
 
