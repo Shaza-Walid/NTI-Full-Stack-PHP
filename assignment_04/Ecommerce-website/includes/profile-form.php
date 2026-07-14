@@ -18,7 +18,7 @@
                         <!-- ======================================= -->
                         <div class="mb-3">
                             <label class="form-label">Username</label>
-                            <input type="text" name="username" class="form-control" value="<?= isset($username) ? $username : ''; ?>">
+                            <input type="text" name="username" class="form-control" placeholder="Enter your name">
                             <?php
                             if(isset($errors['username']))
                                 echo "<small class='text-danger'>{$errors['username']}</small>";

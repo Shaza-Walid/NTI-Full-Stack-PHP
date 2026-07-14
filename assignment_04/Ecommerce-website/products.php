@@ -42,61 +42,44 @@ $products = [
         "desc" => "Professional DSLR Camera."
     ]
 ];
+// Include the navigation bar.
+include("includes/header.php");
+include("includes/navbar.php");
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-
-    <body>
+<div class="container my-5">
+    <h1 class="text-center mb-5">Our Products</h1>
+    <div class="row">
         <?php
-        // Include the navigation bar.
-        include("includes/navbar.php");
+        // ===================================================
+        // Loop through every product inside the array.
+        // $productName contains the key.
+        // $details contains the value (price, image, description).
+        // ===================================================
+        foreach($products as $productName => $details){
         ?>
-        <div class="container my-5">
-            <h1 class="text-center mb-5">Our Products</h1>
-            <div class="row">
-                <?php
-                // ===================================================
-                // Loop through every product inside the array.
-                // $productName contains the key.
-                // $details contains the value (price, image, description).
-                // ===================================================
-                foreach($products as $productName => $details){
-                ?>
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow h-100">
-                        <!-- Product Image -->
-                        <img
-                            src="<?= $details['img']; ?>"
-                            class="card-img-top"
-                            alt="<?= $productName; ?>">
-                        <div class="card-body">
-                            <!-- Product Name -->
-                            <h3 class="card-title"><?= $productName; ?></h3>
-                            <!-- Product Description -->
-                            <p class="card-text"><?= $details['desc']; ?></p>
-                            <!-- Product Price -->
-                            <h5 class="text-success">$<?= $details['price']; ?></h5>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-primary w-100">Buy Now</button>
-                        </div>
-                    </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+                <!-- Product Image -->
+                <img
+                    src="<?= $details['img']; ?>"
+                    class="card-img-top"
+                    alt="<?= $productName; ?>">
+                <div class="card-body">
+                    <!-- Product Name -->
+                    <h3 class="card-title"><?= $productName; ?></h3>
+                    <!-- Product Description -->
+                    <p class="card-text"><?= $details['desc']; ?></p>
+                    <!-- Product Price -->
+                    <h5 class="text-success">$<?= $details['price']; ?></h5>
                 </div>
-                <?php }?>
+                <div class="card-footer">
+                    <button class="btn btn-primary w-100">Buy Now</button>
+                </div>
             </div>
         </div>
-        <footer>
-            <h5>My Store © 2026</h5>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+        <?php }?>
+    </div>
+</div>
+<?php
+include("includes/footer.php");
+?>
