@@ -76,11 +76,6 @@ Then open [http://localhost:8000](http://localhost:8000) in your browser.
 | Phone | Required, must match Egyptian mobile number format (`01[0,1,2,5]XXXXXXXX`) |
 | Facebook / Twitter / Instagram URL | Required, must be a valid URL |
 
-## Notes
-
-- This is a learning project focused on PHP form validation, sessions, and arrays — not intended for production use (e.g., passwords are stored in session in plain text for simplicity).
-- `accounts.php` is a legacy/duplicate file from an earlier version of the account page and can be removed; `account.php` (with the `includes/` files) is the active implementation.
-
 ## License
 
 This project is for educational purposes.
